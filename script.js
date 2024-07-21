@@ -1,4 +1,4 @@
-/* Author: Ajay Singh */
+/* Author: Gaurav Singh */
 /* Version: 1.2 */
 /* Date: 2024-07-01 */
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and display data from CSV
     const fetchDataAndFilter = async () => {
         try {
-            const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRHb7zCNZEfozeuEwtKafE3U_himTnip925rNWnM6F4dZi6ZdVJ3n9Rlwnx26ur2iGxRfeRR5gyr8cJ/pub?gid=0&single=true&output=csv');
+            const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQFPEhoJNEdCkkDku7z5Cm5icLYr5E3Suq0Y-Xe7NFO9L7I2yP_Zdh_W7Bu9n-1oqzWnpBsJ4CXoVQz/pub?output=csv');
             if (!response.ok) throw new Error('Network response was not ok');
             const csv = await response.text();
             const rows = csv.split('\n').map(row => row.trim()).filter(row => row); // Remove empty rows
